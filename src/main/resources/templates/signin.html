@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-<<<<<<< HEAD
+
     <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous">
     <div th:insert="fragments/css.html :: head-style"></div>
 </head>
+
 <body style="background: #333333">
 <div th:insert="fragments/css.html :: body-links"></div>
-=======
-
-</head>
-<body>
-
->>>>>>> f8d4a996feeb6dafe2d27144aefaa2c3aab1b293
 
 <main role="main">
     <div class="container">
         <div class="jumbotron" style="background: forestgreen" >
         <h1>Coffee and Tequila</h1></div>
-        <form class="form-signin" th:action="@{/signin}" method="post">
+        <form class="form-signin" >
             <h3 class="form-signin-heading" style="text-align: center; color: antiquewhite">Please Sign In</h3>
             <p>
                 <label for="username" class="sr-only">Username</label>
@@ -29,26 +24,16 @@
                 <input style="background: forestgreen; border: #333333;" type="password" id="password" name="password" class="form-control" placeholder="Password">
             </p>
             <div style="display: flex; justify-content: space-between">
-<<<<<<< HEAD
-                <button class="btn btn-sm" name="submit" type="submit" style="flex-grow: 0.45; background: forestgreen">Sign In</button>
-                <button class="btn btn-sm" name="Submit" type="Submit" style="flex-grow: 0.45; background: forestgreen"><span th:action="@{/registration}" method="get">Sign Up</span></button>
+                <form th:action="@{/signin}" method="post">
+                     <button class="btn btn-sm" name="submit" type="submit" style="flex-grow: 0.45; background: forestgreen"><span >Sign In</span></button>
+                </form>
+                <form th:action="@{/signup}" method="get">
+                    <button class="btn btn-sm" name="Submit" type="Submit" style="flex-grow: 0.45; background: forestgreen"><span >Sign Up</span></button>
+                </form>
             </div>
         </form>
-=======
-                <button class="btn btn-lg btn-primary" name="submit" value="in" type="submit">Sign In</button>
-            </div>
-
-        </form>
-        <p>New Account ?</p>
-            <form th:action="@{/signup}" method="get">
-                <button class="btn btn-sm btn-info btn pull-right " name="Submit" value="Signin" type="Submit">Sign Up</button>
-            </form>
-
-
->>>>>>> f8d4a996feeb6dafe2d27144aefaa2c3aab1b293
     </div>
 </main>
-
 
 </body>
 </html>
