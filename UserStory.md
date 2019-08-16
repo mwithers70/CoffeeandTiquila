@@ -2,16 +2,16 @@
 <h1>Coffee & Tiquila User Story/ User Flow</h1>
 <b>In person: Teammates decide on team name. For our purposes this is going to be hard-coded and the team name will be COFEPPL .</b> 
 
-User registers with username and password.
+User registers with teamName COFEPPL, username and password.
 
-User logs in with valid username, password, and teamName COFEPPL .
-
+User logs in with valid username, password.  
+(Since User is only able to register if they have the correct teamName, we will not ask for it again upon login.)
 	
 If any field is invalid, do not redirect. Instead if
--   teamName is invalid/null  
+-   teamName is invalid or null  
 “Invalid team name. Please contact your team for the correct name.”
 
--	Username or password is invalid  
+-	Username or password is invalid or null   
 “Invalid credentials. Please try again.”   
 	And allow user to re-try entry until correct.
 	
