@@ -50,6 +50,9 @@ public class User {
     @NotEmpty(message = "Please provide your last name")
     private String lastName;
 
+    @NotEmpty(message = "Please Choose or create your team")
+    private String team;
+
 
 }
 

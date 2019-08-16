@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head><link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous"></head>
+<head>
+
+</head>
 <body>
 
 
@@ -17,13 +19,16 @@
                 <input type="password" id="password" name="password" class="form-control" placeholder="Password">
             </p>
             <div style="display: flex; justify-content: space-between">
-                <button class="btn btn-lg btn-primary" name="submit" value="in" type="submit" style="flex-grow: 0.95">Sign In</button>
+                <button class="btn btn-lg btn-primary" name="submit" value="in" type="submit">Sign In</button>
             </div>
-            <form th:action="@{/registration}" method="get">
+
+        </form>
+        <p>New Account ?</p>
+            <form th:action="@{/signup}" method="get">
                 <button class="btn btn-sm btn-info btn pull-right " name="Submit" value="Signin" type="Submit">Sign Up</button>
             </form>
 
-        </form>
+
     </div>
 </main>
 
