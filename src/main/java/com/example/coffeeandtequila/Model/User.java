@@ -32,9 +32,6 @@ public class User {
     @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
-    @Email(message = "Please provide a valid email")
-    @NotEmpty(message = "Please provide an email")
-    private String email;
 
     @Length(min = 3, message = "Your username must have at least 3 characters")
     @Length(max = 15, message = "Your username cannot have more than 15 characters")
@@ -44,11 +41,8 @@ public class User {
     @Length(min = 5, message = "Your password must have at least 5 characters")
     private String password;
 
-    @NotEmpty(message = "Please provide your first name")
+    @NotEmpty(message = "Please provide your first name & Last Initial")
     private String firstName;
-
-    @NotEmpty(message = "Please provide your last name")
-    private String lastName;
 
     @NotEmpty(message = "Please Choose or create your team")
     private String team;
