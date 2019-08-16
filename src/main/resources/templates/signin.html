@@ -22,21 +22,17 @@
                 <input style="background: forestgreen; border: #333333;" type="password" id="password" name="password" class="form-control" placeholder="Password">
             </p>
             <div style="display: flex; justify-content: space-between">
+                <div style="width: 50%; align-content: flex-start">
                 <form th:action="@{/signin}" method="post">
-                <button class="btn btn-sm" name="submit" type="submit" style="flex-grow: 0.45; background: forestgreen">Sign In</button>
-                </form>
+                <button class="btn btn-sm " name="submit" type="submit" style="width: 96%; margin-right: 3%; flex-grow: 0.45; background: forestgreen">Sign In</button>
+                </form></div>
+                <div style="width: 50%; align-content: flex-end">
                 <form th:action="@{/signup}" method="get">
-                <button class="btn btn-sm" name="Submit" type="Submit" style="flex-grow: 0.45; background: forestgreen">Sign Up</button>
-                </form>
+                <button class="btn btn-sm " name="Submit" type="Submit" style="width: 96%; margin-left: 3%; flex-grow: 0.45; background: forestgreen">Sign Up</button>
+                </form></div>
+
             </div>
         </form>
-
-
-<!--        </form>-->
-<!--        <p>New Account ?</p>-->
-<!--            <form th:action="@{/signup}" method="get">-->
-<!--                <button class="btn btn-sm btn-info btn pull-right " name="Submit" value="Signin" type="Submit">Sign Up</button>-->
-<!--            </form>-->
     </div>
 </main>
 
