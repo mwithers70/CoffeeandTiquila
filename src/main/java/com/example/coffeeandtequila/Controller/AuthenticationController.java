@@ -12,7 +12,7 @@ public class AuthenticationController {
         return "signin";
     }
 
-    @GetMapping("/signup")
+    @GetMapping(value = "/signup")
     public String registration(Model model){
         User user = new User();
         model.addAttribute("user", user);
