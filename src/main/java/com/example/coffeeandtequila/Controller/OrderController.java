@@ -34,21 +34,5 @@ public class OrderController {
         return "orders";
     }
 
-//    @GetMapping(value = "/orders/new")
-//    public String getOrderForm(Model model) {
-//        model.addAttribute("order", new Order());
-//        return "newOrder";
-//    }
 
-    @PostMapping(value = "/orders")
-    public String submitOrderForm(@Valid Order order, BindingResult bindingResult, Model model) {
-//        User user = userService.getLoggedInUser();
-        if (!bindingResult.hasErrors()) {
-//            order.setUser(user);
-            orderService.save(order);
-            model.addAttribute("successMessage", "Order successfully created!");
-            model.addAttribute("order", new Order());
-        }
-        return "newOrder";
-    }
 }

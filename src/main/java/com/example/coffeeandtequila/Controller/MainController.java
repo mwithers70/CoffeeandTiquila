@@ -8,10 +8,7 @@ import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ControllerAdvice;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,10 +22,6 @@ public class MainController {
     @Autowired
     ProductService_1 productService_1;
 
-    @GetMapping("/")
-    public String main() {
-        return "main";
-    }
 
     @GetMapping("/notjustcoffee")
     public String notjustcoffee() {return "notjustcoffee"; }
@@ -39,9 +32,9 @@ public class MainController {
     @GetMapping("/othercafe")
     public String othercafe() {return "othercafe"; }
 
-    @GetMapping("/coffeeshops")
+    @PostMapping("/coffeeshops")
     public String coffeeshops() {
-        return "coffeeshops";
+        return "CoffeeShops";
     }
 
 
