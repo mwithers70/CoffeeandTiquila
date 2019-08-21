@@ -59,14 +59,14 @@ public class AuthenticationController {
         return "signin";
     }
 
-    @PostMapping("/signin")
-    public String signin (@Valid User user,
-                          @RequestParam String submit,
-                          HttpServletRequest request) throws ServletException {
-        String password = user.getPassword();
-        request.login(user.getUsername(), password);
-
-    }
+//    @PostMapping("/signin")
+//    public String signin (@Valid User user,
+//                          @RequestParam String submit,
+//                          HttpServletRequest request) throws ServletException {
+//        String password = user.getPassword();
+//        request.login(user.getUsername(), password);
+//
+//    }
 
     @PostMapping("/signup")
     public String signup(@Valid User user,
