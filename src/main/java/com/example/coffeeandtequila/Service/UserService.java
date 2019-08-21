@@ -1,6 +1,9 @@
 package com.example.coffeeandtequila.Service;
 
+
+import com.example.coffeeandtequila.Model.Role;
 import com.example.coffeeandtequila.Model.User;
+import com.example.coffeeandtequila.Repository.RoleRepository;
 import com.example.coffeeandtequila.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -10,6 +13,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -17,14 +23,40 @@ public class UserService implements UserDetailsService {
     @Autowired
     private UserRepository userRepository;
     @Autowired
+    private RoleRepository roleRepository;
+    @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    public User findByUsername(String username) {
+
+    @Autowired
+    public UserService(UserRepository userRepository,
+                       RoleRepository roleRepository,
+                       BCryptPasswordEncoder bCryptPasswordEncoder) {
+        this.userRepository = userRepository;
+        this.roleRepository = roleRepository;
+        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+    }
+
+
+public User findByUsername(String username) {
         return userRepository.findByUsername(username);
     }
 
+    public List<User> findAll(){
+        return (List<User>) userRepository.findAll();
+    }
+
+    public void save(User user) {
+        userRepository.save(user);
+    }
+    
+    
+
     public void saveNew(User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+         user.setActive(1);
+        Role userRole = roleRepository.findByRole("USER");
+        user.setRoles(new HashSet<Role>(Arrays.asList(userRole)));
         userRepository.save(user);
     }
 
@@ -33,7 +65,10 @@ public class UserService implements UserDetailsService {
     }
 
     public User getLoggedInUser() {
-        return findByUsername(SecurityContextHolder.getContext().getAuthentication().getName());
+        String loggedInUsername = SecurityContextHolder.
+                getContext().getAuthentication().getName();
+
+        return findByUsername(loggedInUsername);
     }
 
 //    public void updateCart(Map<Product, Integer> cart) {
