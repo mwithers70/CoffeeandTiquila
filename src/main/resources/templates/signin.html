@@ -15,7 +15,7 @@
 
         <h1>Coffee and Tiquila</h1></div>
 
-        <form class="form-signin" >
+        <form class="form-signin" th:action="@{/coffeeshops}" method="post">
             <h3 class="form-signin-heading" style="text-align: center; color: antiquewhite">Please Sign In</h3>
             <p>
                 <label for="username" class="sr-only">Username</label>
@@ -28,14 +28,14 @@
             <div style="display: flex; justify-content: space-between">
                 <!--Sign In Button-->
                 <div style="width: 50%; align-content: flex-start">
-                <form th:action="@{/signin}" method="post">
+                <form >
                 <button class="btn btn-sm " name="submit" type="submit" style="width: 96%; margin-right: 3%; flex-grow: 0.45; background: forestgreen">Sign In</button>
                 </form>
                 </div>
 
                 <!--Sign Up (Redirect) Button-->
                 <div style="width: 50%; align-content: flex-end">
-                <form th:action="@{/signup}" method="post">
+                <form th:action="@{/signup}" method="get">
                 <button class="btn btn-sm " name="Submit" type="Submit" style="width: 96%; margin-left: 3%; flex-grow: 0.45; background: forestgreen">Sign Up</button>
                 </form>
                 </div>
