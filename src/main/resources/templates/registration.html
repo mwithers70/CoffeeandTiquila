@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+
+<head>
+    <title>Registration</title>
+
+</head>
+<body>
+<div class="container">
+    <div class="container" style="opacity: 0.8">
+        <!--TODO add th:if="${success == null }" below-->
+        <form  th:action="@{/signup}" th:object="${user}" method="post" autocomplete="off">
+            <h2>Sign up</h2>
+            <div class="form-group">
+                <label th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="validation-message"></label>
+                <input type="text" th:field="*{firstName}" placeholder="First Name" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="validation-message"></label>
+                <input type="text" th:field="*{lastName}" placeholder="Last Name" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label th:if="${#fields.hasErrors('username')}" th:errors="*{username}" class="validation-message"></label>
+                <input type="text" th:field="*{username}" placeholder="Username" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <input type="text" th:field="*{email}" placeholder="Email" class="form-control"/>
+                <label th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="validation-message"></label>
+            </div>
+            <div class="form-group">
+                <input type="password" th:field="*{password}" placeholder="Password" class="form-control"/>
+                <label th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="validation-message"></label>
+            </div>
+            <div class="form-group">
+                <input type="password" th:field="*{team}" placeholder="Team" class="form-control"/>
+                <label th:if="${#fields.hasErrors('team')}" th:errors="*{team}" class="validation-message"></label>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-md btn-success btn-block" name="Submit" value="Submit" type="Submit" th:text="Submit"></button>
+            </div>
+        </form>
+
+    </div>
+</div>
+</body>
+</html>
