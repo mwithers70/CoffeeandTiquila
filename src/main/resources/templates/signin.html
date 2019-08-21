@@ -13,8 +13,6 @@
     <div class="container">
         <div class="jumbotron" style="background: forestgreen" >
 
-        <h1>Coffee and Tequila</h1></div>
-
         <h1>Coffee and Tiquila</h1></div>
 
         <form class="form-signin" >
@@ -28,15 +26,19 @@
                 <input style="background: forestgreen; border: #333333;" type="password" id="password" name="password" class="form-control" placeholder="Password">
             </p>
             <div style="display: flex; justify-content: space-between">
-
+                <!--Sign In Button-->
                 <div style="width: 50%; align-content: flex-start">
                 <form th:action="@{/signin}" method="post">
                 <button class="btn btn-sm " name="submit" type="submit" style="width: 96%; margin-right: 3%; flex-grow: 0.45; background: forestgreen">Sign In</button>
-                </form></div>
+                </form>
+                </div>
+
+                <!--Sign Up (Redirect) Button-->
                 <div style="width: 50%; align-content: flex-end">
-                <form th:action="@{/signup}" method="get">
+                <form th:action="@{/signup}" method="post">
                 <button class="btn btn-sm " name="Submit" type="Submit" style="width: 96%; margin-left: 3%; flex-grow: 0.45; background: forestgreen">Sign Up</button>
-                </form></div>
+                </form>
+                </div>
 
             </div>
         </form>
