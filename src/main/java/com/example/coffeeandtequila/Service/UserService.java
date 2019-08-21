@@ -19,7 +19,8 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class UserService implements UserDetailsService {
+//implements UserDetailsService
+public class UserService  {
     @Autowired
     private UserRepository userRepository;
     @Autowired
@@ -77,11 +78,11 @@ public User findByUsername(String username) {
 //        saveExisting(user);
 //    }
 
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = findByUsername(username);
-        if(user == null) throw new UsernameNotFoundException("Username not found.");
-        return user;
-    }
+//    @Override
+//    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+//        User user = findByUsername(username);
+//        if(user == null) throw new UsernameNotFoundException("Username not found.");
+//        return user;
+//    }
 }
 
