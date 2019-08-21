@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import java.util.Map;
 
 @Service
-public class UserService implements UserDetailsService {
+public class UserService /*implements UserDetailsService*/ {
     @Autowired
     private UserRepository userRepository;
     @Autowired
@@ -42,11 +42,11 @@ public class UserService implements UserDetailsService {
 //        saveExisting(user);
 //    }
 
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = findByUsername(username);
-        if(user == null) throw new UsernameNotFoundException("Username not found.");
-        return user;
-    }
+//    @Override
+//    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+//        User user = findByUsername(username);
+//        if(user == null) throw new UsernameNotFoundException("Username not found.");
+//        return user;
+//    }
 }
 
