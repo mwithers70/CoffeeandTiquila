@@ -28,7 +28,7 @@
 <body>
 <div th:fragment="navbar">
     <nav class="navbar navbar-expand-md navbar-default navbar-light bg-light">
-        <a class="navbar-brand" href="/">Coffee & Tequila</a>
+        <a class="navbar-brand" href="/coffeeshops">Coffee & Tequila</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
                 aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -64,7 +64,7 @@
                     <li class="nav-item active nav-link" th:text="${loggedInUser.username}"></li>
                     <li class="nav-item active">
                         <!--/*@thymesVar id="cart" type="java.util.Map<com.example.demo.model.Product, java.lang.Integer>"*/-->
-                        <a class="nav-link" href="/cart" th:with="size=${#aggregates.sum(cart.values())}">
+                        <a class="nav-link" href="/cart" th:with="size=0">
                             My Cart
                             <span th:if="${size != null}" th:text="| (${size})|"></span>
                         </a>

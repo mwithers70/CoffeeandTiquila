@@ -25,14 +25,16 @@ public class AuthenticationController {
         return "signin";
     }
 
-    @PostMapping("/")
-    public String signin (@Valid User user,
-//                          @RequestParam String submit,
-                          HttpServletRequest request) throws ServletException {
+    @PostMapping("/signin")
+    public String signin (User user, HttpServletRequest request) {
         String password = user.getPassword();
 
-        request.login(user.getUsername(), password);
-        return "CoffeeShops";
+        try {
+            request.login(user.getUsername(), password);
+        } catch(ServletException e) {
+            return "signin";
+        }
+        return "redirect:/coffeeshops";
     }
 
 
