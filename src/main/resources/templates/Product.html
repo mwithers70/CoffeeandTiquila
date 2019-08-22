@@ -5,7 +5,7 @@
 <div th:replace="fragments :: navbar" ></div>
 
 <div class="container">
-    <div class="card mb-3 large-product-card">
+    <div class="card mb-3 large-product-card" th:each="product : ${products}">
         <div class="row no-gutters">
             <div class="col-md-6">
                 <img th:alt="${product.name}" th:src="@{${product.image}}" class="card-img" style="max-height: 100%; object-fit: cover;" />
@@ -24,18 +24,6 @@
                     </form>
                 </div>
             </div>
-<!--    <div th:replace="fragments :: navbar" ></div>-->
-    <main role="main">
-<!--        <iframe-->
-<!--                width="600"-->
-<!--                height="450"-->
-<!--                frameborder="0" style="border:0"-->
-<!--                src="https://www.google.com/maps/d/u/0/embed?mid=1hJZ8hM8pnif0_0d7N8XR2lt989YGabn0">-->
-<!--        </iframe>-->
-<!--        <p><a class="btn btn-primary btn-lg" href="/notjustcoffee" role="button">Begin Order &raquo;</a></p>-->
-
-        <div id="map">
-        </div>
         </div>
     </div>
 </div>
