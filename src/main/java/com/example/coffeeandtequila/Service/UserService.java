@@ -47,12 +47,6 @@ public User findByUsername(String username) {
         return (List<User>) userRepository.findAll();
     }
 
-    public void save(User user) {
-        userRepository.save(user);
-    }
-    
-    
-
     public void saveNew(User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
          user.setActive(1);

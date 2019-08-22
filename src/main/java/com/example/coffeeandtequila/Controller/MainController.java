@@ -2,8 +2,10 @@ package com.example.coffeeandtequila.Controller;
 
 import com.example.coffeeandtequila.Model.Product;
 import com.example.coffeeandtequila.Model.Product_1;
+import com.example.coffeeandtequila.Model.User;
 import com.example.coffeeandtequila.Service.ProductService;
 import com.example.coffeeandtequila.Service.ProductService_1;
+import com.example.coffeeandtequila.Service.UserService;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,6 +24,14 @@ public class MainController {
     @Autowired
     ProductService_1 productService_1;
 
+    @Autowired
+    UserService userService;
+
+    @ModelAttribute("loggedInUser")
+    public User loggedInUser() {
+        return userService.getLoggedInUser();
+    }
+
 
     @GetMapping("/notjustcoffee")
     public String notjustcoffee() {return "notjustcoffee"; }
@@ -32,7 +42,7 @@ public class MainController {
     @GetMapping("/othercafe")
     public String othercafe() {return "othercafe"; }
 
-    @PostMapping("/coffeeshops")
+    @GetMapping("/coffeeshops")
     public String coffeeshops() {
         return "CoffeeShops";
     }
