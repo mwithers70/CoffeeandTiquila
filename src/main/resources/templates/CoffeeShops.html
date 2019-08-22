@@ -2,61 +2,71 @@
 <html lang="en">
 <html xmlns:th="http://www.thymeleaf.org" lang="en"></html>
 <head th:replace="fragments :: head"></head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale-1.0, user-scalable=no">
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale-1.0, user-scalable=no">
 <body>
 <div th:replace="fragments :: navbar" ></div>
 <main role="main">
     <div>
         <iframe
-            width="600"
-            height="450"
-            frameborder="0" style="border:0"
-            src="https://www.google.com/maps/d/u/0/embed?mid=1hJZ8hM8pnif0_0d7N8XR2lt989YGabn0">
+                width="600"
+                height="450"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/d/u/0/embed?mid=1hJZ8hM8pnif0_0d7N8XR2lt989YGabn0">
         </iframe>
     </div>
 
-<!--    <div class="container">-->
-<!--        <div class="row">-->
-<!--            <div class="col-3" th:each="product : ${products}">-->
-<!--                <div class="card">-->
-<!--                    <img class="card-img-top"  th:src="@{${product.image}}" alt="Coffee Items" style="width:100%;height:220px;">-->
-<!--                    <div class="card-body">-->
-<!--                        <h5 class="card-title" th:text="${product.name}"></h5>-->
-<!--                        <p class="card-text" th:text="${product.description}"></p>-->
-<!--                        <p class="card-text" th:text="${product.price}"></p>-->
-<!--                        <form th:action="@{/product/{id}(id=${product.id})}" th:object="${get}" method="get">-->
-<!--                            <button class="btn btn-md btn-primary" name="Edit" value="Edit">View Product</button>-->
-<!--                        </form>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-
-    <div class="container">
-        <div class="row">
-            <p><a class="btn btn-primary btn-lg" href="/notjustcoffee" role="button">Begin Order &raquo;</a></p>
+    <div class="card-group">
+        <div class="card">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Not Just Coffee</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <p><a class="btn btn-primary btn-lg" href="/notjustcoffee" role="button">Not Just Coffee Order &raquo;</a></p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Powered By Coffee && Tiquila</small>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Starbucks</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <p><a class="btn btn-primary btn-lg" href="/starbucks" role="button">Starbucks Order &raquo;</a></p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Powered By Coffee && Tiquila</small>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Amelie</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <p><a class="btn btn-primary btn-lg" href="/othercafe" role="button">Amelie Order &raquo;</a></p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Powered By Coffee && Tiquila</small>
+            </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <p><a class="btn btn-primary btn-lg" href="/starbucks" role="button">Begin Order &raquo;</a></p>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <p><a class="btn btn-primary btn-lg" href="/othercafe" role="button">Begin Order &raquo;</a></p>
-        </div>
-    </div>
 
-    <div>
-        <p><a class="btn btn-primary btn-lg" href="/about" role="button">About Us &raquo;</a></p>
-    </div>
-
-    <div id="map"></div>
 </main>
-<footer th:replace="fragments :: footer"></footer>
+<div>
+    <footer th:replace="fragments :: footer"></footer>
+</div>
 </body>
 </html>
