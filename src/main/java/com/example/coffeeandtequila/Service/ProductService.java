@@ -28,8 +28,8 @@ public class ProductService {
         return productRepository.findDistinctCategories();
     }
 
-    public void save(Product product) {
-        productRepository.save(product);
+    public Product save(Product product) {
+        return productRepository.save(product);
     }
 
     public void deleteById(long id) {
