@@ -38,6 +38,7 @@ public class AuthenticationController {
     }
 
 
+
     @GetMapping("/signup")
     public String signup(Model model) {
         User user = new User();
