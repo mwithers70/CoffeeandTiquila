@@ -24,7 +24,7 @@ import React from 'react';
                      <div style={{display: 'flex', justifyContent: 'space-between'}}>
                          {/*Sign In Button*/}
                          <div style={{width: '50%', alignContent: 'flex-start'}}>
-                             <button className="btn btn-sm " name="submit" type="submit" style={{
+                             <button onClick={SignIn} className="btn btn-sm " name="submit" type="submit" style={{
                                  width: '96%',
                                  marginRight: '3%',
                                  flexGrow: '0.45',
@@ -35,7 +35,7 @@ import React from 'react';
                          {/*Sign Up (Redirect) Button*/}
                          <div style={{width: '50%', alignContent: 'flex-end'}}>
                              <form method="get">
-                                 <button className="btn btn-sm " name="Submit" type="Submit" style={{
+                                 <button onClick={SignUp} className="btn btn-sm " name="Submit" type="Submit" style={{
                                      width: '96%',
                                      marginLeft: '3%',
                                      flexGrow: '0.45',

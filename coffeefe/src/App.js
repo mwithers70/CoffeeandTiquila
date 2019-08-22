@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import SignIn from './SignIn';
+import About from './About';
+import Coffeeshops from "./Coffeeshops";
 
 
 
@@ -10,7 +12,9 @@ class App extends Component{
         return(
             <Router>
             <Switch>
-            <Route path='/' exact={true} component={SignIn}/>
+            <Route path='/signin' exact={true} component={SignIn}/>
+            <Route path='/about' exact={true} component={About}/>
+            <Route path='/coffeeshops' exact={true} component={Coffeeshops}/>
             </Switch>
             </Router>
 
