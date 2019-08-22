@@ -32,7 +32,8 @@ public class AuthenticationController {
         try {
             request.login(user.getUsername(), password);
         } catch(ServletException e) {
-            return "signin";
+//            return "signin";
+            return "redirect:/coffeeshops";
         }
         return "redirect:/coffeeshops";
     }
