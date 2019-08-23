@@ -1,7 +1,13 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import SignIn from './SignIn';
-import CoffeeShops from './CoffeeShops';
+import BeginOrder from './BeginOrder';
+import About from './About';
+import Menu from '.Menu';
+import OrderSummary from './OrderSummary';
+import Product from './Product';
+import Registration from './Registration';
+import Navbar from './Navbar';
 
 
 class App extends Component{
@@ -9,8 +15,13 @@ class App extends Component{
         return(
             <Router>
             <Switch>
-            <Route path='/' exact={true} component={SignIn}/>
-            <Route path='coffeeshops' exact={true} component={CoffeeShops}/>
+                <Route path='/' exact={true} component={SignIn}/>
+                <Route path='/beginOrder' exact={true} component={BeginOrder}/>
+                <Route path='/about' exact={true} component={About}/>
+                <Route path='/menu' exact={true} component={Menu}/>
+                <Route path='/orderSummary' exact={true} component={OrderSummary}/>
+                <Route path='/product' exact={true} component={Product}/>
+                <Route path='/registration' exact={true} component={Registration}/>
             </Switch>
             </Router>
 
