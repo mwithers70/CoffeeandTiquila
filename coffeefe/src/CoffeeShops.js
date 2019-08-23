@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Navbarp from './Navbar';
 // import { * } from 'bootstrap';
 // import { * } from 'react-router-dom';
 
@@ -8,6 +9,7 @@ class CoffeeShops extends Component{
     {
         return (
             <div>
+                <Navbarp/>
                 <div>
                     <iframe width={600} height={450} frameBorder={0} style={{border: 0}}
                             src="https://www.google.com/maps/d/u/0/embed?mid=1hJZ8hM8pnif0_0d7N8XR2lt989YGabn0">

@@ -7,7 +7,6 @@ import Navbar from './Navbar'
      render() {
          return (
              <div style={{background: '#3e1e04'}}>
-                 <Navbar>
                  <div className="container">
                      <div className="jumbotron" style={{background: '#40e0d0'}}>
                          <h1>Coffee and Tiquila</h1></div>
@@ -38,7 +37,8 @@ import Navbar from './Navbar'
                              {/*Sign Up (Redirect) Button*/}
                              <div style={{width: '50%', alignContent: 'flex-end'}}>
                                  <form method="get">
-                                     <button onClick={SignUp} className="btn btn-sm " name="Submit" type="Submit"
+                                     {/*onClick={SignUp} put below when SignUp component is in Src folder*/}
+                                     <button  className="btn btn-sm " name="Submit" type="Submit"
                                              style={{
                                                  width: '96%',
                                                  marginLeft: '3%',
@@ -51,7 +51,6 @@ import Navbar from './Navbar'
                          </div>
                      </form>
                  </div>
-                 </Navbar>
              </div>
          );
      }

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Product from './Product.js';
+import Navbarp from './Navbar';
 
 const API_URL = "http://localhost:8080/products";
 
@@ -32,7 +33,7 @@ class ProductPage extends Component{
     render(){
         return(
             <div>
-                TESTING
+                <Navbarp/>
                 {this.state.products.map(function(product){
                     return(
                         <Product name={product.name} price={product.price} quantity={product.quantity} description={product.description} brand={product.brand} category={product.category} image={product.image} ></Product>
