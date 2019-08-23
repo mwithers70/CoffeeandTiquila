@@ -5,31 +5,29 @@
     <link rel="stylesheet" type="text/css" href="signin.css"/>
     <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous">
 <!--    <div th:insert="fragments/css.html :: head-style"></div>-->
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Rock+Salt|Merienda|Dancing+Script&display=swap" rel="stylesheet">
 </head>
 
-<body style="background: #9c6f44">
+<body style="background: linear-gradient(to bottom, #663300 0%, #996633 60%);background-size: 100vw 100vh">
 <div th:insert="fragments/css.html :: body-links"></div>
 
 <main role="main">
-    <h1 style="font-family:'Homemade Apple', cursive; text-align: center; color: #f2dfab">Coffee and Tiquila</h1>
+    <p style="font-family:'Homemade Apple', cursive; text-align: center; color: #f2dfab; font-size: 75px">Coffee and Tiquila</p>
 
-        <form class="form-signin" th:action="@{/coffeeshops}" method="post">
-            <h3 class="form-signin-heading" style="font-family:'Merienda', cursive; text-align: center; color: #f2dfab">Can we get a name for your order?</h3>
-            <p>
-                <label for="username" class="sr-only">
-                <input style="background: #f2dfab; border: #f2dfab" type="text" id="username" name="username" class="form-control" placeholder="Username">
+<!--        <form class="form-signin" th:action="@{/coffeeshops}" method="post">-->
+            <p style="font-family:'Rock Salt', cursive; text-align: center; color: #f2dfab; font-size:20px">Can we get a name for your order?</p>
+            <form class="form-signin" th:action="@{/coffeeshops}" method="post">
+            <p
+                label for="username" class="sr-only">
+                <input style="background: #f2dfab; border: #f2dfab; text-align: center" type="text" id="username" name="username" class="form-control" placeholder="Username">
             </p>
             <p>
                 <label for="password" class="sr-only"></label>
-                <input style="background: #f2dfab; border: #f2dfab;" type="password" id="password" name="password" class="form-control" placeholder="Password">
+                <input style="background: #f2dfab; border: #f2dfab; text-align: center; margin:0 auto" type="password" id="password" name="password" class="form-control" placeholder="Password">
             </p>
             <div style="display: flex; justify-content: space-between">
-                <!--Sign In Button-->
                 <div style="width: 50%; align-content: flex-start">
-                <form >
+                <form>
                 <button class="btn btn-sm " name="submit" type="submit" style="width: 96%; margin-right: 3%; flex-grow: 0.45; background: #f2dfab">Sign In</button>
                 </form>
                 </div>

@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
-<head th:replace="fragments :: head"></head>
+<head th:replace="fragments :: head">
+    <link href="https://fonts.googleapis.com/css?family=Beth+Ellen|Charmonman&display=swap" rel="stylesheet">
+</head>
 <body>
 <div th:replace="fragments :: navbar" ></div>
-<body>
+<body style="background: #9c6f44">
 
-<div class="container">
-    This is the about page.
-    <h1>Work in progress!</h1>
+<div style="font-family:'Beth Ellen','Charmonman',cursive; text-align: Center; color: #f2dfab ">
+When your teammates all want coffee -- or maybe tea -- or a muffin? Do they have those? Wait, where are we ordering from again? Ugh, I hate that place. --
+/b and Karen NEEDS a cranberry scone, but only if the cranberries were bought fresh and dehydrated in the last 27 hours.
+/b and they're about as organized as a trash fire
+/b and it's your turn to make the trek to obtain these vital supplies
+/b ... keep receipts.
 </div>
 
 
 
-    <footer th:replace="fragments :: footer"></footer>
-
+<!--    <footer th:replace="fragments :: footer"></footer>-->
 </body>
 </html>
