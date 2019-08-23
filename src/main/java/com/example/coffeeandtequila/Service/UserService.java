@@ -19,7 +19,6 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-//implements UserDetailsService
 public class UserService implements UserDetailsService {
     @Autowired
     private UserRepository userRepository;
@@ -85,4 +84,3 @@ public User findByUsername(String username) {
         return user;
     }
 }
-

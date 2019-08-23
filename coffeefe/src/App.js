@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import SignIn from './SignIn';
-
+import CoffeeShops from './CoffeeShops';
 
 
 class App extends Component{
@@ -11,6 +10,7 @@ class App extends Component{
             <Router>
             <Switch>
             <Route path='/' exact={true} component={SignIn}/>
+            <Route path='coffeeshops' exact={true} component={CoffeeShops}/>
             </Switch>
             </Router>
 
