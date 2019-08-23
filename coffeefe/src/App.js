@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import SignIn from './SignIn';
+import Product from './Product';
+import ProductPage from './ProductPage';
 
 
 
@@ -11,6 +13,7 @@ class App extends Component{
             <Router>
             <Switch>
             <Route path='/' exact={true} component={SignIn}/>
+            <Route path='/product' component={ProductPage}/>
             </Switch>
             </Router>
 

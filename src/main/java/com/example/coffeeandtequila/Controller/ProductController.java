@@ -5,14 +5,13 @@ import com.example.coffeeandtequila.Service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
-@Controller
+@RestController
+@CrossOrigin
 public class ProductController {
     @Autowired
     ProductService productService;
@@ -28,5 +27,10 @@ public class ProductController {
     public String createOrUpdate(@Valid Product product) {
         productService.save(product);
         return "redirect:/product/" + product.getId();
+    }
+
+    @GetMapping("/products")
+    public List<Product> getAllProducts(){
+        return productService.findAll();
     }
 }
