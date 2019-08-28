@@ -24,7 +24,7 @@
                         <p class="card-text" th:text="${product.description}"></p>
                         <p class="card-text" th:text="${product.price}"></p>
                         <form th:action="@{/product/{id}(id=${product.id})}" th:object="${get}" method="get">
-                            <button class="btn btn-md btn-primary" name="Edit" value="Edit">View Product</button>
+                            <button class="btn btn-md btn-primary" name="Edit" value="Edit">View NotJustCoffee</button>
                         </form>
                     </div>
                 </div>

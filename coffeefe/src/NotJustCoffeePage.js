@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import Product from './Product.js';
+import NotJustCoffee from './NotJustCoffee.js';
 import Navbarp from './Navbar';
 
 const API_URL = "http://localhost:8080/products";
 
-class ProductPage extends Component{
+class NotJustCoffeePage extends Component{
     constructor(props){
         super(props)
         this.state= {
@@ -36,11 +36,11 @@ class ProductPage extends Component{
                 <Navbarp/>
                 {this.state.products.map(function(product){
                     return(
-                        <Product name={product.name} price={product.price} quantity={product.quantity} description={product.description} brand={product.brand} category={product.category} image={product.image} ></Product>
+                        <NotJustCoffee name={product.name} price={product.price} quantity={product.quantity} description={product.description} brand={product.brand} category={product.category} image={product.image} ></NotJustCoffee>
                     )
                 })}
             </div>
         )
     }
 }
- export default ProductPage;
+ export default NotJustCoffeePage;
