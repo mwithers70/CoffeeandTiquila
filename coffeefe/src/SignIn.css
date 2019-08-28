@@ -1,0 +1,26 @@
+.signinpage{
+ background: linear-gradient(to bottom, #663300 0%, #996633 60%);
+    background-size: 100vw 100vh;
+
+}
+
+h1{
+    font-family: 'Homemade Apple', cursive;
+    text-align: center;
+    color: #f2dfab;
+    font-size: 75px;
+}
+h3{
+    font-family: 'Rock Salt', cursive;
+    text-align: center;
+    color: #f2dfab;
+    font-size: 20px;
+}
+input{
+    background: #f2dfab;
+    border: #f2dfab;
+    text-align: center;
+}
+button{
+    background: #f2dfab;
+}
