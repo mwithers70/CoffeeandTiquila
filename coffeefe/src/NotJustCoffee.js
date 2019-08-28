@@ -3,9 +3,9 @@ import React, {Component} from 'react';
 
 
 class NotJustCoffee extends Component{
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
         render()
         {
@@ -24,7 +24,7 @@ class NotJustCoffee extends Component{
                             <div className="row no-gutters">
                             <div className="col-md-6">
                             <div className="card-title">
-                               <img  className="card-img" src={`.${imageElement}`}/>
+                               <img  className="card-img" src={`.${imageElement}`} alt={"njcImage"}/>
                                 <div className="card-body">
                                     <h3 className="card-text">{nameElement}</h3>
                                     <p className="card-text">{descriptionElement}</p>
