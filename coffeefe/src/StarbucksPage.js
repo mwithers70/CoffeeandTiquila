@@ -3,28 +3,28 @@ import axios from 'axios';
 import Starbucks from './Starbucks.js';
 import Navbarp from './Navbar';
 
-const API_URL = "http://localhost:8080/products";
+const API_URL1 = "http://localhost:8080/products1";
 
 class StarbucksPage extends Component{
     constructor(props){
         super(props)
         this.state= {
-            products: []
+            products_1: []
         }
-        this.getAllProducts = this.getAllProducts.bind(this);
+        this.getAllProducts_1 = this.getAllProducts_1.bind(this);
     }
 
     componentDidMount() {
-        this.getAllProducts();
+        this.getAllProducts_1();
     }
 
-    getAllProducts(){
-        axios.get(API_URL)
+    getAllProducts_1(){
+        axios.get(API_URL1)
             .then(
-                response => {
-                    console.log(response.data);
+                response_1 => {
+                    console.log(response_1.data);
                     this.setState({
-                        products: response.data
+                        products_1: response_1.data
                     })
                 }
             )
@@ -34,9 +34,9 @@ class StarbucksPage extends Component{
         return(
             <div>
                 <Navbarp/>
-                {this.state.products.map(function(product){
+                {this.state.products_1.map(function(product_1){
                     return(
-                        <Starbucks name={product.name} price={product.price} quantity={product.quantity} description={product.description} brand={product.brand} category={product.category} image={product.image} ></Starbucks>
+                        <Starbucks name={product_1.name} price={product_1.price} quantity={product_1.quantity} description={product_1.description} brand={product_1.brand} category={product_1.category} image={product_1.image} ></Starbucks>
                     )
                 })}
             </div>
