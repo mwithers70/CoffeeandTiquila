@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import SignIn from './SignIn';
+import About from './About';
+import CoffeeShops from "./CoffeeShops";
+import NotJustCoffeePage from './NotJustCoffeePage';
 
 
 
@@ -11,31 +13,14 @@ class App extends Component{
             <Router>
             <Switch>
             <Route path='/' exact={true} component={SignIn}/>
+            <Route path='/about' exact={true} component={About}/>
+            <Route path='/coffeeshops' exact={true} component={CoffeeShops}/>
+            <Route path='/notjustcoffee' component={NotJustCoffeePage}/>
             </Switch>
             </Router>
 
         )
     }
 }
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 export default App;

@@ -8,8 +8,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
+@CrossOrigin
 public class ProductController {
     @Autowired
     ProductService productService;
@@ -22,5 +24,10 @@ public class ProductController {
     @RequestMapping(value = "/product", method = {RequestMethod.POST, RequestMethod.PUT})
     public Product createOrUpdate(@Valid Product product) {
         return productService.save(product);
+    }
+
+    @GetMapping("/products")
+    public List<Product> getAllProducts(){
+        return productService.findAll();
     }
 }

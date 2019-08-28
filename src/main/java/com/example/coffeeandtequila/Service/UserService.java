@@ -72,7 +72,7 @@ public User findByUsername(String username) {
         return findByUsername(loggedInUsername);
     }
 
-//    public void updateCart(Map<Product, Integer> cart) {
+//    public void updateCart(Map<NotJustCoffee, Integer> cart) {
 //        User user = getLoggedInUser();
 //        user.setCart(cart);
 //        saveExisting(user);
