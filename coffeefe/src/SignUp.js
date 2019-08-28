@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SignIn from "./SignIn";
 
 class Register extends Component {
     constructor(props){
@@ -21,9 +22,9 @@ class Register extends Component {
                         <h3 className="form-signin-heading" style={{textAlign: 'center', color: '#40e0d0'}}>Please Sign
                             In</h3>
                         <p>
-                            <label htmlFor="username" className="sr-only">Firstname & Last Initial</label>
-                            <input style={{background: '#40e0d0', border: '#40e0d0'}} type="text" id="username"
-                                   name="username" className="form-control" placeholder="Username"/>
+                            <label htmlFor="fnli" className="sr-only">Firstname & Last Initial</label>
+                            <input style={{background: '#40e0d0', border: '#40e0d0'}} type="text" id="fnli"
+                                   name="username" className="form-control" placeholder="Firstname & Last Initial"/>
                         </p>
 
                         <p>

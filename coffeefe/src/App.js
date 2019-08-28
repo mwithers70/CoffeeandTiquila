@@ -6,6 +6,7 @@ import CoffeeShops from "./CoffeeShops";
 import NotJustCoffeePage from './NotJustCoffeePage';
 import StarbucksPage from './StarbucksPage';
 import AmeliesPage from "./AmeliesPage";
+import SignUp from "./SignUp";
 
 
 
@@ -16,6 +17,7 @@ class App extends Component{
             <Router>
             <Switch>
             <Route path='/' exact={true} component={SignIn}/>
+            <Route path='/signup' exact={true} component={SignUp}/>
             <Route path='/about' exact={true} component={About}/>
             <Route path='/coffeeshops' exact={true} component={CoffeeShops}/>
             <Route path='/notjustcoffee' component={NotJustCoffeePage}/>
