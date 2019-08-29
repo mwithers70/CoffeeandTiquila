@@ -9,6 +9,7 @@ import NotJustCoffeePage from './Components/NotJustCoffeePage';
 import StarbucksPage from './Components/StarbucksPage';
 import AmeliesPage from "./Components/AmeliesPage";
 import SignUp from "./Components/SignUp";
+import OrderSummary from "./Components/OrderSummary";
 
 
 
@@ -25,6 +26,7 @@ class App extends Component{
             <Route path='/notjustcoffee' component={NotJustCoffeePage}/>
             <Route path='/starbucks' component={StarbucksPage}/>
             <Route path='/amelies' exact={true} component={AmeliesPage}/>
+            <Route path= '/ordersummary' exact={true} component={OrderSummary}/>
             </Switch>
             </Router>
 

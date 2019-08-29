@@ -32,7 +32,7 @@ class Starbucks extends Component{
                                         <p className="card-text">{brandElement}</p>
                                         <p className="card-text">{categoryElement}</p>
                                         <p className="card-text">{priceElement}</p>
-                                        <button className="btn-md">Add Me Now</button>
+                                        <button className="btn-md"><a href="./ordersummary"> Add Me Now</a></button>
                                     </div>
                                 </div>
                             </div>
