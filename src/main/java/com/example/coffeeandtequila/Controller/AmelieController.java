@@ -1,18 +1,18 @@
 package com.example.coffeeandtequila.Controller;
 
 import com.example.coffeeandtequila.Model.Amelie;
+import com.example.coffeeandtequila.Model.Product;
 import com.example.coffeeandtequila.Service.AmelieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
-@Controller
+@RestController
+@CrossOrigin
 public class AmelieController {
     @Autowired
     AmelieService amelieService;
@@ -28,5 +28,9 @@ public class AmelieController {
     public String createOrUpdate(@Valid Amelie amelie) {
         amelieService.save(amelie);
         return "redirect:/amelie/" + amelie.getId();
+    }
+    @GetMapping("/products2")
+    public List<Amelie> getAllProducts(){
+        return amelieService.findAll();
     }
 }
