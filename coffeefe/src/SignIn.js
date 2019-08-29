@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import SignUp from "./SignUp";
+import {Link} from "react-router-dom";
 //import Navbar from './Navbar'
 //import './src/App.js';
 
@@ -38,14 +40,13 @@ import React, {Component} from 'react';
                              <div style={{width: '50%', alignContent: 'flex-end'}}>
                                  <form method="get">
                                      {/*onClick={SignUp} put below when SignUp component is in Src folder*/}
-                                     <button  className="btn btn-sm " name="Submit" type="Submit"
+                                     <button className="btn btn-sm " name="Submit" type="Submit"
                                              style={{
                                                  width: '96%',
                                                  marginLeft: '3%',
                                                  flexGrow: '0.45',
                                                  background: '#40e0d0'
-                                             }}>Sign Up
-                                     </button>
+                                             }}><Link to='signup'> Sign Up</Link> </button>
                                  </form>
                              </div>
                          </div>
