@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import Navbarp from './Navbar';
 // import { * } from 'bootstrap';
 // import { * } from 'react-router-dom';
-import AmeliesStorefront from './AmeliesStorefront.jpg';
-import StarbucksStorefront from './StarbucksStorefront.jpg';
-import NJCStorefront from './NJCStorefront.jpg';
+import AmeliesStorefront from '../Images/AmeliesStorefront.jpg';
+import StarbucksStorefront from '../Images/StarbucksStorefront.jpg';
+import NJCStorefront from '../Images/NJCStorefront.jpg';
 
 
 class CoffeeShops extends Component{
@@ -35,7 +35,7 @@ class CoffeeShops extends Component{
                             </div>
                         </div>
                         <div className="card-footer">
-                            <small className="text-muted">Powered By Coffee &amp;&amp; Tiquila</small>
+                            <small className="text-muted">Powered By Coffee &amp; Tiquila</small>
                         </div>
                     </div>
 
@@ -53,7 +53,7 @@ class CoffeeShops extends Component{
                             </div>
                         </div>
                         <div className="card-footer">
-                            <small className="text-muted">Powered By Coffee &amp;&amp; Tiquila</small>
+                            <small className="text-muted">Powered By Coffee &amp; Tiquila</small>
                         </div>
                     </div>
 
@@ -72,7 +72,7 @@ class CoffeeShops extends Component{
                             </div>
                         </div>
                         <div className="card-footer">
-                            <small className="text-muted">Powered By Coffee &amp;&amp; Tiquila</small>
+                            <small className="text-muted">Powered By Coffee &amp; Tiquila</small>
                         </div>
                     </div>
                 </div>

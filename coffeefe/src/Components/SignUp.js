@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SignIn from "./SignIn";
+import '../css/SignIn.css'
 
 class Register extends Component {
     constructor(props){
@@ -14,32 +15,30 @@ class Register extends Component {
     }
     render() {
         return (
-            <div style={{background: '#3e1e04'}}>
+            <div className="signuppage">
                 <div className="container">
-                    <div className="jumbotron" style={{background: '#40e0d0'}}>
-                        <h1>Coffee and Tiquila</h1></div>
+                        <h1>Coffee and Tiquila</h1>
                     <form className="form-signin" method="post">
-                        <h3 className="form-signin-heading" style={{textAlign: 'center', color: '#40e0d0'}}>Please Sign
-                            In</h3>
+                        <h3 className="form-signin-heading" style={{textAlign: 'center', color: '#f2dfab'}}> Fill this out</h3>
                         <p>
                             <label htmlFor="fnli" className="sr-only">Firstname & Last Initial</label>
-                            <input style={{background: '#40e0d0', border: '#40e0d0'}} type="text" id="fnli"
+                            <input style={{background: '#f2dfab', border: '#f2dfab'}} type="text" id="fnli"
                                    name="username" className="form-control" placeholder="Firstname & Last Initial"/>
                         </p>
 
                         <p>
                             <label htmlFor="username" className="sr-only">Username</label>
-                            <input style={{background: '#40e0d0', border: '#40e0d0'}} type="text" id="username"
+                            <input style={{background: '#f2dfab', border: '#f2dfab'}} type="text" id="username"
                                    name="username" className="form-control" placeholder="Username"/>
                         </p>
                         <p>
                             <label htmlFor="password" className="sr-only">Password</label>
-                            <input style={{background: '#40e0d0', border: '#40e0d0'}} type="password" id="password"
+                            <input style={{background: '#f2dfab', border: '#f2dfab'}} type="password" id="password"
                                    name="password" className="form-control" placeholder="Password"/>
                         </p>
                         <p>
                             <label htmlFor="username" className="sr-only">Username</label>
-                            <input style={{background: '#40e0d0', border: '#40e0d0'}} type="text" id="username"
+                            <input style={{background: '#f2dfab', border: '#f2dfab'}} type="text" id="username"
                                    name="username" className="form-control" placeholder="Username"/>
                         </p>
                         <div style={{display: 'flex', justifyContent: 'space-between'}}>
@@ -49,8 +48,8 @@ class Register extends Component {
                                     width: '96%',
                                     marginRight: '3%',
                                     flexGrow: '0.45',
-                                    background: '#40e0d0'
-                                }}>Sign In
+                                    background: '#f2dfab'
+                                }}><a href="./coffeeshops">Sign In</a>
                                 </button>
                             </div>
 

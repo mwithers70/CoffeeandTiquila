@@ -1,18 +1,23 @@
 import React, {Component} from 'react';
-//import Navbar from './Navbar'
-//import './src/App.js';
-import './SignIn.css'
+import Navbarp from './Navbar'
+import '../App.js';
+import '../css/SignIn.css'
+import './CoffeeShops'
+import CoffeeShops from "./CoffeeShops";
+import Navbar from "reactstrap/es/Navbar";
 
 
  class SignIn extends Component{
      render() {
          return (
-             <div className="signinpage">
-                 <div>
+
+             <div>
+                 <Navbarp/>
+                 <div className="signinpage">
                      <div className="styles">
-                         <h1>Coffee and Tiquila</h1></div>
+                             <h1>Coffee and Tiquila</h1>
                      <form className="form-signin" method="post">
-                         <h3 className="form-signin-heading" style={{textAlign: 'center', color: '#f2dfabd'}}>Can we get a name for your order?
+                         <h3 className="form-signin-heading" style={{textAlign: 'center', color: '#f2dfab'}}>Can we get a name for your order?
                              </h3>
                          <p>
                              <label htmlFor="username" className="sr-only">Username</label>
@@ -27,35 +32,35 @@ import './SignIn.css'
                          <div style={{display: 'flex', justifyContent: 'space-between'}}>
                              {/*Sign In Button*/}
                              <div style={{width: '50%', alignContent: 'flex-start'}}>
-                                 <button onClick={SignIn} className="btn btn-sm " name="submit" type="submit" style={{
+                                 <button onClick={CoffeeShops} className="btn btn-sm " name="submit" type="submit" style={{
                                      width: '96%',
                                      marginRight: '3%',
                                      flexGrow: '0.45',
                                      background: '#f2dfab'
-                                 }}>Sign In
+                                 }}><a href="./coffeeshops">Sign In</a>
                                  </button>
                              </div>
                              {/*Sign Up (Redirect) Button*/}
                              <div style={{width: '50%', alignContent: 'flex-end'}}>
                                  <form method="get">
                                      {/*onClick={SignUp} put below when SignUp component is in Src folder*/}
-                                     <button  className="btn btn-sm " name="Submit" type="Submit"
+                                     <button  className="btn btn-sm " name="Submit" type="Submit" onClick={'/SignUp'}
                                              style={{
                                                  width: '96%',
                                                  marginLeft: '3%',
                                                  flexGrow: '0.45',
                                                  background: '#f2dfab'
-                                             }}>Sign Up
-                                     </button>
+                                             }}><a href="/SignUp">Sign Up
+                                     </a></button>
                                  </form>
                              </div>
                          </div>
                      </form>
                  </div>
+                 </div>
              </div>
          );
      }
  }
-//this is the first commit for the master-react branch
 
 export default SignIn;
