@@ -14,7 +14,7 @@ class CoffeeShops extends Component{
             <div>
                 <Navbarp/>
                 <div>
-                    <iframe width={600} height={450} frameBorder={0} style={{border: 0}} alt={"map"}
+                    <iframe width={1527} height={450} frameBorder={0} style={{border: 0}} alt={"map"}
                             src="https://www.google.com/maps/d/u/0/embed?mid=1hJZ8hM8pnif0_0d7N8XR2lt989YGabn0">
                     </iframe>
                 </div>

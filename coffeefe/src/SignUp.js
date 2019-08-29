@@ -5,7 +5,7 @@ class Register extends Component {
     constructor(props){
         super(props);
         this.state={
-            first_name_last_Initial:'',
+            first_name:'',
             username:'',
             password:'',
             team: ''
@@ -24,28 +24,32 @@ class Register extends Component {
                         <p>
                             <label htmlFor="fnli" className="sr-only">Firstname & Last Initial</label>
                             <input style={{background: '#40e0d0', border: '#40e0d0'}} type="text" id="fnli"
-                                   name="username" className="form-control" placeholder="Firstname & Last Initial"/>
+                                   name="username" className="form-control" onChange = {(event,newValue) => this.setState({first_name:newValue})}
+                                   placeholder="Firstname & Last Initial"/>
                         </p>
 
                         <p>
                             <label htmlFor="username" className="sr-only">Username</label>
                             <input style={{background: '#40e0d0', border: '#40e0d0'}} type="text" id="username"
-                                   name="username" className="form-control" placeholder="Username"/>
+                                   name="username" className="form-control" onChange = {(event,newValue) => this.setState({username:newValue})}
+                                   placeholder="Username"/>
                         </p>
                         <p>
                             <label htmlFor="password" className="sr-only">Password</label>
                             <input style={{background: '#40e0d0', border: '#40e0d0'}} type="password" id="password"
-                                   name="password" className="form-control" placeholder="Password"/>
+                                   name="password" className="form-control" onChange = {(event,newValue) => this.setState({password:newValue})}
+                                   placeholder="Password"/>
                         </p>
                         <p>
-                            <label htmlFor="username" className="sr-only">Username</label>
-                            <input style={{background: '#40e0d0', border: '#40e0d0'}} type="text" id="username"
-                                   name="username" className="form-control" placeholder="Username"/>
+                            <label htmlFor="team" className="sr-only">Team</label>
+                            <input style={{background: '#40e0d0', border: '#40e0d0'}} type="text" id="team"
+                                   name="team" className="form-control" onChange = {(event,newValue) => this.setState({team:newValue})}
+                                   placeholder="Team"/>
                         </p>
                         <div style={{display: 'flex', justifyContent: 'space-between'}}>
                             {/*Sign In Button*/}
                             <div style={{width: '50%', alignContent: 'flex-start'}}>
-                                <button onClick={SignIn} className="btn btn-sm " name="submit" type="submit" style={{
+                                <button  onClick={(event) => this.handleClick(event)} className="btn btn-sm " primary={true} type="submit" style={{
                                     width: '96%',
                                     marginRight: '3%',
                                     flexGrow: '0.45',
