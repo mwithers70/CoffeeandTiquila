@@ -3,26 +3,27 @@ import SignUp from "./SignUp";
 import {Link} from "react-router-dom";
 //import Navbar from './Navbar'
 //import './src/App.js';
+import './SignIn.css'
 
 
  class SignIn extends Component{
      render() {
          return (
-             <div style={{background: '#3e1e04'}}>
-                 <div className="container">
-                     <div className="jumbotron" style={{background: '#40e0d0'}}>
+             <div className="signinpage">
+                 <div>
+                     <div className="styles">
                          <h1>Coffee and Tiquila</h1></div>
                      <form className="form-signin" method="post">
-                         <h3 className="form-signin-heading" style={{textAlign: 'center', color: '#40e0d0'}}>Please Sign
-                             In</h3>
+                         <h3 className="form-signin-heading" style={{textAlign: 'center', color: '#f2dfabd'}}>Can we get a name for your order?
+                             </h3>
                          <p>
                              <label htmlFor="username" className="sr-only">Username</label>
-                             <input style={{background: '#40e0d0', border: '#40e0d0'}} type="text" id="username"
+                             <input style={{background: '#f2dfab', border: '#f2dfab'}} type="text" id="username"
                                     name="username" className="form-control" placeholder="Username"/>
                          </p>
                          <p>
                              <label htmlFor="password" className="sr-only">Password</label>
-                             <input style={{background: '#40e0d0', border: '#40e0d0'}} type="password" id="password"
+                             <input style={{background: '#f2dfab', border: '#f2dfab'}} type="password" id="password"
                                     name="password" className="form-control" placeholder="Password"/>
                          </p>
                          <div style={{display: 'flex', justifyContent: 'space-between'}}>
@@ -32,7 +33,7 @@ import {Link} from "react-router-dom";
                                      width: '96%',
                                      marginRight: '3%',
                                      flexGrow: '0.45',
-                                     background: '#40e0d0'
+                                     background: '#f2dfab'
                                  }}>Sign In
                                  </button>
                              </div>
@@ -45,8 +46,9 @@ import {Link} from "react-router-dom";
                                                  width: '96%',
                                                  marginLeft: '3%',
                                                  flexGrow: '0.45',
-                                                 background: '#40e0d0'
+                                                background: '#f2dfab'
                                              }}><Link to='signup'> Sign Up</Link> </button>
+
                                  </form>
                              </div>
                          </div>

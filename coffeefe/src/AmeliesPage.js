@@ -3,28 +3,28 @@ import axios from 'axios';
 import Amelies from './Amelies.js';
 import Navbarp from './Navbar';
 
-const API_URL = "http://localhost:8080/products";
+const API_URL2 = "http://localhost:8080/products2";
 
 class AmeliesPage extends Component{
     constructor(props){
         super(props)
         this.state= {
-            products: []
+            products2: []
         }
-        this.getAllProducts = this.getAllProducts.bind(this);
+        this.getAllProducts2 = this.getAllProducts2.bind(this);
     }
 
     componentDidMount() {
-        this.getAllProducts();
+        this.getAllProducts2();
     }
 
-    getAllProducts(){
-        axios.get(API_URL)
+    getAllProducts2(){
+        axios.get(API_URL2)
             .then(
                 response => {
                     console.log(response.data);
                     this.setState({
-                        products: response.data
+                        products2: response.data
                     })
                 }
             )
@@ -34,9 +34,9 @@ class AmeliesPage extends Component{
         return(
             <div>
                 <Navbarp/>
-                {this.state.products.map(function(product){
+                {this.state.products2.map(function(products2){
                     return(
-                        <Amelies name={product.name} price={product.price} quantity={product.quantity} description={product.description} brand={product.brand} category={product.category} image={product.image} ></Amelies>
+                        <Amelies name={products2.name} price={products2.price} quantity={products2.quantity} description={products2.description} brand={products2.brand} category={products2.category} image={products2.image} ></Amelies>
                     )
                 })}
             </div>
