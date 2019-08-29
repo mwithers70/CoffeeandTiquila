@@ -20,24 +20,27 @@ class Starbucks extends Component{
 
         return (
             <div className="container">
-                <div className="card mb-2 large-product-card">
-                    <div className="row no-gutters">
-                        <div className="col-md-6">
-                            <div className="card-title">
-                                <img  className="card-img" src={`.${imageElement}`}/>
-                                <div className="card-body">
-                                    <h3 className="card-text">{nameElement}</h3>
-                                    <p className="card-text">{descriptionElement}</p>
-                                    <p className="card-text">{brandElement}</p>
-                                    <p className="card-text">{categoryElement}</p>
-                                    <p className="card-text">{priceElement}</p>
-                                    <button className="btn-md">Add Me Now</button>
+                <div className="card-group">
+                    <div className="card mb-2 small-product-card">
+                        <div className="row no-gutters">
+                            <div className="col-md-6">
+                                <div className="card-title">
+                                    <img className="card-img" src={`.${imageElement}`}/>
+                                    <div className="card-body">
+                                        <h3 className="card-text">{nameElement}</h3>
+                                        <p className="card-text">{descriptionElement}</p>
+                                        <p className="card-text">{brandElement}</p>
+                                        <p className="card-text">{categoryElement}</p>
+                                        <p className="card-text">{priceElement}</p>
+                                        <button className="btn-md">Add Me Now</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         )
     }
 }
