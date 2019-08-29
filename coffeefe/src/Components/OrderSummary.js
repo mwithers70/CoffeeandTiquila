@@ -9,7 +9,7 @@ class OrderSummary extends Component{
                 <div className="styles fixHeight" >
                 <h1>Order Summary</h1>
 
-                <button><a href="./coffeeshops"> Go back to select your coffee </a></button>
+                <button className="btn-lg "><a href="./coffeeshops"> Go back to select your coffee </a></button>
                 </div>
             </div>
         );
