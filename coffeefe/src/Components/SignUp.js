@@ -15,7 +15,7 @@ class Register extends Component {
     }
     render() {
         return (
-            <div className="signuppage">
+            <div className="signuppage fixHeight">
                 <div className="container">
                     <div><h1>Coffee and Tiquila</h1></div>
                     <form className="form-signin" method="post">
