@@ -1,5 +1,6 @@
 .signinpage, .signuppage{
- background: linear-gradient(to bottom, #663300 0%, #996633 60%);
+    height: 100vh;
+    background: linear-gradient(to bottom, #663300 0%, #996633 60%);
 }
 
 h1{

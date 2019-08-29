@@ -17,7 +17,7 @@ class Register extends Component {
         return (
             <div className="signuppage">
                 <div className="container">
-                        <h1>Coffee and Tiquila</h1>
+                    <div><h1>Coffee and Tiquila</h1></div>
                     <form className="form-signin" method="post">
                         <h3 className="form-signin-heading" style={{textAlign: 'center', color: '#f2dfab'}}> Fill this out</h3>
                         <p>
