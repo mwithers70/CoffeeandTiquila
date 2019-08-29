@@ -20,10 +20,10 @@ public class AuthenticationController {
     @Autowired
     private UserService userService;
 
-    @GetMapping(value = "/")
-    public String login() {
-        return "signin";
-    }
+//    @GetMapping(value = "/")
+//    public String login() {
+//        return "signin";
+//    }
 
     @PostMapping("/signin")
     public String signin (User user, HttpServletRequest request) {

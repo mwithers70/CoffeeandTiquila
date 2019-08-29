@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import SignIn from './SignIn';
-import About from './About';
-import CoffeeShops from "./CoffeeShops";
-import NotJustCoffeePage from './NotJustCoffeePage';
-import StarbucksPage from './StarbucksPage';
-import AmeliesPage from "./AmeliesPage";
-import SignUp from "./SignUp";
+import SignIn from './Components/SignIn';
+import './css/App.css'
+import './css/SignIn.css'
+import About from './Components/About';
+import CoffeeShops from "./Components/CoffeeShops";
+import NotJustCoffeePage from './Components/NotJustCoffeePage';
+import StarbucksPage from './Components/StarbucksPage';
+import AmeliesPage from "./Components/AmeliesPage";
+import SignUp from "./Components/SignUp";
 
 
 

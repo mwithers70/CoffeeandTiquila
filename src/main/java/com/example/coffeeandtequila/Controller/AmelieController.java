@@ -1,7 +1,7 @@
 package com.example.coffeeandtequila.Controller;
 
 import com.example.coffeeandtequila.Model.Amelie;
-import com.example.coffeeandtequila.Model.Product_1;
+import com.example.coffeeandtequila.Model.Product;
 import com.example.coffeeandtequila.Service.AmelieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,9 +29,8 @@ public class AmelieController {
         amelieService.save(amelie);
         return "redirect:/amelie/" + amelie.getId();
     }
-
     @GetMapping("/products2")
-    public List<Amelie> getAllProducts() {
+    public List<Amelie> getAllProducts(){
         return amelieService.findAll();
     }
 }
