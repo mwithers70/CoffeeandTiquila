@@ -1,4 +1,4 @@
-.signinpage, .signuppage{
+.signinpage, .signuppage, body{
     height: 100vh;
     background: linear-gradient(to bottom, #663300 0%, #996633 60%);
 }

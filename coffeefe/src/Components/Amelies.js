@@ -29,6 +29,7 @@ class Amelies extends Component{
                                     <p className="card-text">{brandElement}</p>
                                     <p className="card-text">{categoryElement}</p>
                                     <p className="card-text">{priceElement}</p>
+                                    <button className="btn-md">Add Me Now</button>
                                 </div>
                             </div>
                         </div>
