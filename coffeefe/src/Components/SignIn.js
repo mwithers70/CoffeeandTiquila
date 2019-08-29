@@ -14,7 +14,7 @@ import Navbar from "reactstrap/es/Navbar";
              <div>
                  <Navbarp/>
                  <div className="signinpage">
-                     <div className="styles">
+                     <div className="styles fixHeight" >
                              <h1>Coffee and Tiquila</h1>
                      <form className="form-signin" method="post">
                          <h3 className="form-signin-heading" style={{textAlign: 'center', color: '#f2dfab'}}>Can we get a name for your order?

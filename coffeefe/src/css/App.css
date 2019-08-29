@@ -23,6 +23,14 @@
   color: white;
 }
 
+html, body {
+  height: 100vh;
+}
+
+.fixHeight {
+  padding-top: 30px;
+  height: 100vh;
+}
 /*.App-link {*/
 /*  color: #61dafb;*/
 /*}*/
